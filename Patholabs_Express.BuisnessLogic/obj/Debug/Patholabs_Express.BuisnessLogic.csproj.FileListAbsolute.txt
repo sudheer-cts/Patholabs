@@ -1,0 +1,15 @@
+D:\Patholabs\Server\Patholabs_Express.BuisnessLogic\bin\Debug\Patholabs_Express.BuisnessLogic.dll.config
+D:\Patholabs\Server\Patholabs_Express.BuisnessLogic\bin\Debug\Patholabs_Express.BuisnessLogic.dll
+D:\Patholabs\Server\Patholabs_Express.BuisnessLogic\bin\Debug\Patholabs_Express.BuisnessLogic.pdb
+D:\Patholabs\Server\Patholabs_Express.BuisnessLogic\bin\Debug\EntityFramework.dll
+D:\Patholabs\Server\Patholabs_Express.BuisnessLogic\bin\Debug\EntityFramework.SqlServer.dll
+D:\Patholabs\Server\Patholabs_Express.BuisnessLogic\bin\Debug\Patholabs_Express.DataAccess.dll
+D:\Patholabs\Server\Patholabs_Express.BuisnessLogic\bin\Debug\Patholabs_Express.DataAccess.pdb
+D:\Patholabs\Server\Patholabs_Express.BuisnessLogic\bin\Debug\Patholabs_Express.DataAccess.dll.config
+D:\Patholabs\Server\Patholabs_Express.BuisnessLogic\bin\Debug\EntityFramework.xml
+D:\Patholabs\Server\Patholabs_Express.BuisnessLogic\bin\Debug\EntityFramework.SqlServer.xml
+D:\Patholabs\Server\Patholabs_Express.BuisnessLogic\obj\Debug\Patholabs_Express.BuisnessLogic.csprojAssemblyReference.cache
+D:\Patholabs\Server\Patholabs_Express.BuisnessLogic\obj\Debug\Patholabs_Express.BuisnessLogic.csproj.CoreCompileInputs.cache
+D:\Patholabs\Server\Patholabs_Express.BuisnessLogic\obj\Debug\Patholabs_Express.BuisnessLogic.csproj.CopyComplete
+D:\Patholabs\Server\Patholabs_Express.BuisnessLogic\obj\Debug\Patholabs_Express.BuisnessLogic.dll
+D:\Patholabs\Server\Patholabs_Express.BuisnessLogic\obj\Debug\Patholabs_Express.BuisnessLogic.pdb

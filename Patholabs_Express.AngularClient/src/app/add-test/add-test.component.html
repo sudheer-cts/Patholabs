@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <h1>Add New Test</h1>
+            <form [formGroup]="addForm">
+               <div class="form-group">
+                    <label>Test Name</label>
+                    <input type="text" class="form-control" id="name" name="name" formControlName="TestName" required>
+                </div>
+                <div class="form-group">
+                    <label>Test Price</label>
+                    <input type="text" class="form-control" id="testprice" name="testprice" formControlName="TestPrice" required>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary" (click)="addTest()" [disabled]="!addForm.valid" >Add Test </button>
+                </div>
+  
+            </form>
+        </div>
+    </div>
+  </div>

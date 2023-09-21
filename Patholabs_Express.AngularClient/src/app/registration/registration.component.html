@@ -1,0 +1,82 @@
+<div class="container-fluid background">
+    <div class="row">
+        <div class="col-md-12">
+            <form [formGroup]="regForm" (ngSubmit)="register()" >
+
+                <div class="form-group">
+                    <label for="name" class="fa fa-user"></label>
+                    <input class="form-control" type="text" placeholder="Enter Your Name" formControlName="name" tabindex="1">
+                    <span class="text-danger" *ngIf="regForm.controls.name.errors && regForm.controls.name.touched">
+                        <br>Name is Required
+                    </span>
+                </div>
+
+                <div class="form-group">
+                    <label for="mobileNumber" class="fa fa-mobile"></label>
+                    <input class="form-control" maxlength="10" type="tel" placeholder="Mobile Number" formControlName="Contact_No" tabindex="2">
+                    <span class="text-danger" *ngIf="regForm.controls.Contact_No.errors && regForm.controls.Contact_No.touched">
+                        <br>Invalid Mobile Number
+                    </span>
+                </div>
+
+                <div class="form-group">
+                    <label for="email" class="fa fa-envelope"></label>
+                    <input  class="form-control" type="email" placeholder="Email Address" formControlName="email" tabindex="3">
+                    <span class="text-danger" *ngIf="regForm.controls.email.errors && regForm.controls.email.touched">
+                        <br>Invalid Email Address
+                    </span>
+                </div>
+
+                <div class="form-group">
+                    <label for="password" class="fa fa-lock"></label>
+                    <input  class="form-control" type="password" placeholder="Password" formControlName="password" tabindex="4">
+                    <span class="text-danger" *ngIf="regForm.controls.password.errors && regForm.controls.password.touched">
+                        <br>Atleast 6 character Password is Required
+                    </span>
+                </div>
+
+                <div class="form-group">
+                    <label for="address" class="fa fa-address"></label>
+                    <input  class="form-control" type="text" placeholder="Address" formControlName="address" tabindex="5">
+                    <span class="text-danger" *ngIf="regForm.controls.address.errors && regForm.controls.address.touched">
+                        <br>Invalid Address
+                    </span>
+                </div>
+                
+                <div class="form-group">
+                    <label for="age" class="fa fa-age"></label>
+                    <input  class="form-control" type="number" placeholder="Age" min="18" max="100" formControlName="age" tabindex="6">
+                    <span class="text-danger" *ngIf="regForm.controls.age.errors && regForm.controls.age.touched">
+                        <br>Invalid Age
+                    </span>
+                </div>
+
+                <div class="form-group">
+                    <label for="gender" class="fa fa-gender"></label>
+                    <!-- <input type="text" placeholder="gender" formControlName="gender" tabindex="7"> -->
+                    <select class="form-control" formControlName="gender" tabindex="7">
+                        <option value="">select</option>
+                        <option value="m">Male</option>
+                        <option value="f">Female</option>
+                    </select>
+                    <span class="text-danger" *ngIf="regForm.controls.gender.errors && regForm.controls.gender.touched">
+                        <br>Invalid Gender
+                    </span>
+                </div>
+
+
+
+                <div class="text-center">
+                    <button id="submitButton" type="submit" class="btn btn-primary" [disabled]="!regForm.valid">
+                        Register
+                    </button>
+                </div>
+
+                <div class="text-success" *ngIf="successMessage">
+                    {{regForm.value.email}} is {{successMessage}}
+                </div>
+                
+            </form>
+        </div>
+    </div>
+</div>

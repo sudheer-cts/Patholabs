@@ -1,0 +1,51 @@
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Appointment Id</th>
+        <th scope="col">Test Id</th> <!---should be test name here-->
+        <th scope="col">Customer Name</th>
+        <th scope="col">Booking Date</th>
+        <th scope="col">Email</th>
+        <th scope="col">Appointment Date</th>
+        <th scope="col">Status</th>
+        <th scope="col">Edit Appointment</th>
+        <th scope="col">Feedback</th>
+        <th scope="col">Cancel Appointment</th>
+        <th scope="col">Download Report</th>
+        
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of appArray" class="info">
+        <td>{{item.AppointmentId}}</td>
+        <td>{{item.TestId}}</td>
+        <td>{{item.CustomerName}}</td>
+        <td>{{item.App_Book_Time | date: 'dd/MM/yyyy'}}</td>
+        <td>{{item.Email}}</td>
+        <td>{{item.App_Date_Time | date: 'dd/MM/yyyy'}}</td>
+        <td>Success</td>
+        <td>
+          <button type="submit" class="btn btn-warning" (click)="updateAppointment(item.AppointmentId)"  *ngIf="appArray.length>0"  >Edit Appointment </button>
+        </td>
+        <td>
+          <button type="submit" class="btn btn-info" routerLink="/feedback" (click)="giveFeed(item.AppointmentId)" *ngIf="appArray.length>0"  >Feedback </button>
+        </td>
+        
+        <td>
+          <button type="submit" class="btn btn-dark" (click)="delete(item.AppointmentId)" *ngIf="appArray.length>0"  >Cancel Appointment</button>
+        </td>
+        <td>
+          <a href="https://www.lalpathlabs.com/hi-in/SampleReports/Z614.pdf" target="_blank()" class="btn btn-success" >Download link</a>
+        </td>
+        
+
+    </tr>
+      <!--for loop for data-->
+    </tbody>
+  </table>
+
+
+
+
+  

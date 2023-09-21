@@ -1,0 +1,52 @@
+<main>
+
+  <section class="py-5 text-center container">
+    <div class="row py-lg-5">
+      <div class="col-lg-6 col-md-8 mx-auto">
+        <h1 class="fw-dark">Test Details</h1>
+        <p class="lead text-dark">Here you can be able book tests and see various tests provided by us!! </p>
+        
+      </div>
+    </div>
+  </section>
+  <!-- <div class="form-group" >
+<input id="searchBoxId"  autocomplete="none" name="searchBox" class="input-text form-control" 
+      [(ngModel)]="searchBoxtext" placeholder="Search Here" > <button >Search</button>
+  </div> -->
+  <div class="input-group">
+    <div class="form-outline">
+      <input type="search" id="form1" class="form-control" [(ngModel)]="searchBoxtext" />
+      <label class="form-label" for="form1"></label>
+      <button type="button" class="btn btn-dark" (click)="onclickSearch(searchBoxtext)">
+       Search
+      </button>
+    </div>
+    
+  </div>
+<hr>
+  <div class="album py-5 bg-light"  >
+    <div class="container" >
+      
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+        <div class="col" *ngFor='let test of tests'>
+          <div class="card shadow-sm">
+            <!-- <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Test image</text></svg> -->
+            <img src="https://images.pexels.com/photos/4226924/pexels-photo-4226924.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"  width="100%" height="225">
+            <div class="card-body">
+              <p class="card-text">Test Name : {{test.TestName}}</p>
+              <p class="card-text">Test Price : {{test.TestPrice}}</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-dark" (click)="bookTest(test.TestId)" *ngIf="!isAdmin && isLogin" >Book</button>
+                  <button type="button" class="btn btn-sm btn-dark" (click)="editTest(test.TestId, test.TestName)" *ngIf="isLogin && isAdmin" >Edit</button>
+                  
+                </div>
+              
+              </div>
+            </div>
+          </div>
+        </div>       
+      </div>
+    </div>
+  </div>
+</main>

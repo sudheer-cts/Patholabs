@@ -1,0 +1,57 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <h1>Sales Report</h1>
+    
+               
+
+                <div class="form-group">
+                    <label>From Date</label>
+                    <input type="date" class="form-control" id="fromdate" name="fromdate" [(ngModel)]=" salesDto.fromdate" required>
+                    <!-- <span class="text-danger" *ngIf="editform.controls.TestPrice.errors && editform.controls.TestPrice.touched"></span> -->
+
+                </div>
+
+                <div class="form-group">
+                    <label>To Date</label>
+                    <input type="date" class="form-control" id="todate" name="todate" [(ngModel)]="salesDto.todate" required>
+                    <!-- <span class="text-danger" *ngIf="editform.controls.TestPrice.errors && editform.controls.TestPrice.touched"></span> -->
+
+                </div>
+                
+                
+  
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary" (click)="SalesReport()" >Generate report</button>
+                </div>
+
+                <table class="table table-dark">
+                    <thead>
+                      <tr>
+                        <th scope="col">Test Name</th>
+                        <th scope="col">Test Price</th>
+                        
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr *ngFor="let item of testDetail">
+                        
+                        <td>{{item.TestName}}</td>
+                        <td>{{item.TestPrice}}</td>
+                        
+                      </tr>
+                      <tr>
+                          <td>Total Sales</td>
+                          <td>{{total}}</td>
+                      </tr>
+                      
+                      
+                    </tbody>
+                  </table>
+
+                  
+  
+            
+        </div>
+    </div>
+  </div>
